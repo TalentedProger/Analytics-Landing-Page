@@ -1,0 +1,66 @@
+.roadmap {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 120px;
+	margin-bottom: 100px;
+	@media screen and (max-width:1220px) {
+		gap: 180px;
+		margin-bottom: 240px;
+	}
+	&::after {
+		content: " ";
+		bottom: -30px;
+		position: absolute;
+		right: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+	}
+	img {
+		max-height: 410px;
+	}
+
+	&__item {
+		max-height: 410px;
+		display: flex;
+		gap: 100px;
+		align-items: center;
+		@media screen and (max-width:1220px) {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+	&__item:not(:first-child) {
+		margin-top: 70px;
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		max-width: 480px;
+	}
+	&__title {
+	font-weight: 700;
+	font-size: 40px;
+	color: $background-dark-blue;
+	}
+	&__text-block {
+		font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	color: $gray;
+	}
+	&__picture {
+		height: auto;
+		max-width: 600px;
+		border-radius: 30px;
+	}
+}
+@media screen and (max-width:1220px) {
+	.roadmap__item:last-child {
+		margin-bottom: 60px;
+	}
+}
